@@ -1,6 +1,6 @@
 # alterra-academy
 # Query SELECT * FROM users;
-  1. Redis :"GET users"
+  1. Redis :"GET users"/Cari panjang datanya lalu "LRANGE users 0 n" * n merupakan data terakhir
   2. Neo4J : "MATCH (users)
               RETURN users"
   3. Cassandra : "SELECT * FROM users;"
