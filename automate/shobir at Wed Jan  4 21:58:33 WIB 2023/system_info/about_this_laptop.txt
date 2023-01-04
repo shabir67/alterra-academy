@@ -1,0 +1,2 @@
+My username: shobir
+With host:Darwin Muhammads-MacBook-Pro.local 20.6.0 Darwin Kernel Version 20.6.0: Tue Jun 21 20:50:28 PDT 2022; root:xnu-7195.141.32~1/RELEASE_X86_64 x86_64
