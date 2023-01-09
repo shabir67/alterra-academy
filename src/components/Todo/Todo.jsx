@@ -11,7 +11,7 @@ const Todo = (props) => {
   }
 
   return (
-    <div className="flex flex-col w-full rounded-lg p-2 shadow-md bg-gray-100 teext-middle characters">
+    <div className="flex flex-col w-full rounded-lg p-bo shadow-md bg-gray-100 teext-middle characters">
       <div className="border bg-gray-200 rounded flex flex-row items-center p-1 justify-between select-none">
         <label className="flex items-center justify-start space-x-3 overflow-auto">
           <input
