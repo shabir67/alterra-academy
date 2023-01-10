@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function NotFound() {
   return (
@@ -15,6 +16,11 @@ function NotFound() {
       <h1 className="my-10 text-5xl font-bold md:text-7xl text-indigo-500 hover:text-indigo-700 animate-pulse">
         ERROR <span className="text-#cc98ff-800">404</span>, Page not found
       </h1>
+      <div className="mt-12 flex items-start justify-start gap-5 text-center ">
+        <button className=" h-14  cursor-pointer rounded-xl bg-indigo-500 px-8 font-semibold text-white hover:shadow-xl">
+          <Link to="">Home</Link>
+        </button>
+      </div>
     </div>
   );
 }
