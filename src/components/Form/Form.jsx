@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTodo } from "../../Store/toDo";
+import { addTodos } from "../../Store/toDo";
 
 const Form = (props) => {
   const [value, setValue] = useState("");
 
-  const todos = useSelector((state) => state?.todo?.toDoState);
+  const todos = useSelector((state) => state?.todo?.todos);
   const dispatch = useDispatch();
 
   const handleSubmit = (event) => {
@@ -15,9 +15,11 @@ const Form = (props) => {
     } else {
       setValue("");
       event.target.reset();
+      // console.log("Ini form",todos);
       dispatch(
-        addTodo({
+        addTodos({
           id: todos.length > 0 ? todos[todos.length - 1].id + 1 : 1,
+          userId: 1,
           title: value,
           completed: false,
         })
@@ -43,6 +45,7 @@ const Form = (props) => {
           type="text"
           onChange={(e) => {
             setValue((value) => (value = e.target.value));
+            handleKeyDown(e);
           }}
           className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-1 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
         ></input>

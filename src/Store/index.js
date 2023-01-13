@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import toDoReducer from "./toDo";
+import todoReducer from "./toDo";
 import storage from "redux-persist/lib/storage";
 import { persistReducer, persistStore } from "redux-persist";
 import thunk from "redux-thunk";
@@ -9,7 +9,7 @@ const persistConfig = {
   storage,
 };
 
-const persistedReducer = persistReducer(persistConfig, toDoReducer);
+const persistedReducer = persistReducer(persistConfig, todoReducer);
 
 export const store = configureStore({
   reducer: {
