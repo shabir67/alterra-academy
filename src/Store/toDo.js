@@ -1,18 +1,30 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
+
+const BASE_URL = "https://jsonplaceholder.typicode.com/todos";
 
 const initialState = {
-  toDoState: [],
+  todos: [],
+  status: "idle",
+  error: "",
 };
 
-export const toDoSlice = createSlice({
-  name: "toDoState",
+export const fetchTodos = createAsyncThunk("todos/fetchTodos", async () => {
+  let res = await axios.get(BASE_URL);
+  res = res.data.slice(0, 2);
+  console.log("ini res", res);
+  return res;
+});
+
+export const todoSlice = createSlice({
+  name: "todos",
   initialState,
   reducers: {
-    addTodo: (state, { payload }) => {
-      state.toDoState = [...state.toDoState, payload];
+    addTodos: (state, { payload }) => {
+      state.todos = [...state.todos, payload];
     },
-    markTodo: (state, { payload }) => {
-      state.toDoState = state.toDoState.map((data) => {
+    markTodos: (state, { payload }) => {
+      state.todos = state.todos.map((data) => {
         if (payload !== data.id) {
           return data;
         }
@@ -22,12 +34,29 @@ export const toDoSlice = createSlice({
         };
       });
     },
-    removeTodo: (state, { payload }) => {
-      state.toDoState = state.toDoState.filter((data) => data.id !== payload);
+    removeTodos: (state, { payload }) => {
+      state.todos = state.todos.filter((data) => data.id !== payload);
     },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchTodos.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(fetchTodos.fulfilled, (state, action) => {
+        state.status = "succeeded";
+        state.todos = [...state.todos, action.payload];
+      })
+      .addCase(fetchTodos.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.error.message;
+      });
   },
 });
 
-export const { addTodo, markTodo, removeTodo } = toDoSlice.actions;
+export const { addTodos, markTodos, removeTodos } = todoSlice.actions;
+export const selectAllTodos = (state) => state.todo.todos;
+export const getPostsError = (state) => state.posts.error;
+export const getPostsStatus = (state) => state.posts.status;
 
-export default toDoSlice.reducer;
+export default todoSlice.reducer;
