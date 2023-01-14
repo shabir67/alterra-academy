@@ -1,6 +1,6 @@
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { Link } from "react-router-dom";
+import { Link, redirect, useNavigate } from "react-router-dom";
 import Pict from "../../Assets/PrimaryLogo.png";
 
 function Navbar() {
@@ -13,6 +13,16 @@ function Navbar() {
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }
+  let history = useNavigate();
+
+  const handleRedirect = (path) => {
+    let pathname = window.location.pathname;
+    if (pathname === path) {
+      return redirect(path);
+    }
+    history(path);
+  };
+
   return (
     <Disclosure as="nav" className="bg-white">
       {({ open }) => (
@@ -76,7 +86,12 @@ function Navbar() {
                   )}
                   aria-current={item.current ? "page" : undefined}
                 >
-                  <Link to={item.href}>{item.name}</Link>
+                  <Link
+                    to={item.href}
+                    onClick={() => handleRedirect(item.href)}
+                  >
+                    {item.name}
+                  </Link>
                 </Disclosure.Button>
               ))}
             </div>

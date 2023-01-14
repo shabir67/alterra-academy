@@ -45,7 +45,7 @@ export const todoSlice = createSlice({
       })
       .addCase(fetchTodos.fulfilled, (state, action) => {
         state.status = "succeeded";
-        if (state.todos.length == 0) {
+        if (state.todos.length <= 0) {
           state.todos = action.payload;
         } else state.todos = [...state.todos];
       })
