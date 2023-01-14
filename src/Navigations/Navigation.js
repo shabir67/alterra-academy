@@ -1,8 +1,8 @@
 //Nav dep
 import { Outlet, Routes, Route } from "react-router-dom";
 //Layout
-import Footer from "../components/Footer/Footer";
-import Navbar from "../components/Navbar/NavBar";
+import Footer from "../Components/Footer/Footer";
+import Navbar from "../Components/Navbar/NavBar";
 //Page
 import Home from "../Page/Home/Home";
 import AboutUs from "../Page/AboutUs/AboutUs";
