@@ -1,0 +1,461 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Altera",
+		"_postman_id": "724b6696-1d74-9212-58ab-7c2666547df7",
+		"description": "Postman collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "News API",
+			"description": "",
+			"item": [
+				{
+					"name": "News-API-Apple",
+					"request": {
+						"url": {
+							"raw": "https://newsapi.org/v2/everything?q=apple&from=2023-01-14&to=2023-01-14&sortBy=popularity&apiKey=45ffdc1631a34737b63b482b2f8bf2e3",
+							"protocol": "https",
+							"host": [
+								"newsapi",
+								"org"
+							],
+							"path": [
+								"v2",
+								"everything"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "apple",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "from",
+									"value": "2023-01-14",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "to",
+									"value": "2023-01-14",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "sortBy",
+									"value": "popularity",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "apiKey",
+									"value": "45ffdc1631a34737b63b482b2f8bf2e3",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "News-API-Porsche",
+					"request": {
+						"url": {
+							"raw": "https://newsapi.org/v2/everything?q=porsche&from=2023-01-11&to=2023-01-11&sortBy=popularity&apiKey=45ffdc1631a34737b63b482b2f8bf2e3",
+							"protocol": "https",
+							"host": [
+								"newsapi",
+								"org"
+							],
+							"path": [
+								"v2",
+								"everything"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "porsche",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "from",
+									"value": "2023-01-11",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "to",
+									"value": "2023-01-11",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "sortBy",
+									"value": "popularity",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "apiKey",
+									"value": "45ffdc1631a34737b63b482b2f8bf2e3",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "News-API-endgame",
+					"request": {
+						"url": {
+							"raw": "https://newsapi.org/v2/everything?q=endgame&from=2023-01-11&to=2023-01-11&sortBy=popularity&apiKey=45ffdc1631a34737b63b482b2f8bf2e3",
+							"protocol": "https",
+							"host": [
+								"newsapi",
+								"org"
+							],
+							"path": [
+								"v2",
+								"everything"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "endgame",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "from",
+									"value": "2023-01-11",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "to",
+									"value": "2023-01-11",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "sortBy",
+									"value": "popularity",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "apiKey",
+									"value": "45ffdc1631a34737b63b482b2f8bf2e3",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "News-API-HOTD",
+					"request": {
+						"url": {
+							"raw": "https://newsapi.org/v2/everything?q=house +of +dragon&from=2023-01-15&to=2023-01-15&sortBy=popularity&apiKey=45ffdc1631a34737b63b482b2f8bf2e3",
+							"protocol": "https",
+							"host": [
+								"newsapi",
+								"org"
+							],
+							"path": [
+								"v2",
+								"everything"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "house +of +dragon",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "from",
+									"value": "2023-01-15",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "to",
+									"value": "2023-01-15",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "sortBy",
+									"value": "popularity",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "apiKey",
+									"value": "45ffdc1631a34737b63b482b2f8bf2e3",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "News-API-G20",
+					"request": {
+						"url": {
+							"raw": "https://newsapi.org/v2/everything?q=g20&from=2023-01-15&to=2023-01-15&sortBy=popularity&apiKey=45ffdc1631a34737b63b482b2f8bf2e3",
+							"protocol": "https",
+							"host": [
+								"newsapi",
+								"org"
+							],
+							"path": [
+								"v2",
+								"everything"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "g20",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "from",
+									"value": "2023-01-15",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "to",
+									"value": "2023-01-15",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "sortBy",
+									"value": "popularity",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "apiKey",
+									"value": "45ffdc1631a34737b63b482b2f8bf2e3",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "swapi.dev",
+			"description": "",
+			"item": [
+				{
+					"name": "swapi.dev-film-1",
+					"request": {
+						"url": "https://swapi.dev/api/films/1/",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "swapi.dev-planets-12",
+					"request": {
+						"url": "https://swapi.dev/api/planets/12/",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "swapi.dev-vehicles-7",
+					"request": {
+						"url": "https://swapi.dev/api/vehicles/7/",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "swapi.dev-starships-5",
+					"request": {
+						"url": "http https://swapi.dev/api/films/1/\n",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "swapi.dev-people-8",
+					"request": {
+						"url": "https://swapi.dev/api/people/8/\n",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RentAbook-API",
+			"description": "",
+			"item": [
+				{
+					"name": "Get-book-12",
+					"request": {
+						"url": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/book/12",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Put-Book-12",
+					"request": {
+						"url": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/book/12",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 1234,\n  \"title\": \"Judul Buku Satu\",\n  \"isbn\": \"1-234-5678-9101112-13\",\n  \"writer\": \"Dr. Who\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-book-12",
+					"request": {
+						"url": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/book/12",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post-book-12",
+					"request": {
+						"url": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/book",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"client_id\": 1234,\n  \"client_key\": \"CLIENT01\",\n  \"client_secret\": \"SECRET01\",\n  \"status\": true\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get-token-12",
+					"request": {
+						"url": {
+							"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/token?client_id=12&client_secret=12",
+							"protocol": "https",
+							"host": [
+								"virtserver",
+								"swaggerhub",
+								"com"
+							],
+							"path": [
+								"sepulsa",
+								"RentABook-API",
+								"1.0.0",
+								"token"
+							],
+							"query": [
+								{
+									"key": "client_id",
+									"value": "12",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "client_secret",
+									"value": "12",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
