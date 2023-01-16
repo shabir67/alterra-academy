@@ -41,9 +41,9 @@ If a new user is created with a POST request to/users, and it can be retrieved w
 ![Delete-Table Properties.png](resultPhoto%2FDelete-Table%20Properties.png)
 
 Source:
-https://www.baeldung.com/rest-http-put-vs-post
-https://www.rfc-editor.org/rfc/rfc2616#page-53
-https://medium.com/@9cv9official/what-are-get-post-put-patch-delete-a-walkthrough-with-javascripts-fetch-api-17be31755d28
+1. https://www.baeldung.com/rest-http-put-vs-post
+2. https://www.rfc-editor.org/rfc/rfc2616#page-53
+3. https://medium.com/@9cv9official/what-are-get-post-put-patch-delete-a-walkthrough-with-javascripts-fetch-api-17be31755d28
 
 
 
