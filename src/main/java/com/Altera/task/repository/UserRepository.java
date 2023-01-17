@@ -1,7 +1,7 @@
 package com.Altera.task.repository;
 
-import com.Altera.task.entity.UserEntity;
+import com.Altera.task.entity.User;
 import org.springframework.data.repository.CrudRepository;
 
-public interface UserRepository extends CrudRepository<UserEntity, Integer> {
+public interface UserRepository extends CrudRepository<User, Integer> {
 }
