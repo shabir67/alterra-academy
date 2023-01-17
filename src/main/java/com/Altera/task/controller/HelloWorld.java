@@ -17,17 +17,15 @@ public class HelloWorld {
     log.info("[Uba] v1/messages Get method is called");
     return "Hello World!";
 }
-
 @PostMapping(path = "/v1/messages")
     public String postMessages(){
     log.info("[Uba] v1/messages Post method is called");
     return "Hello World";
 }
-
 @DeleteMapping(path = "/v1/messages")
     public String deleteMessage() {
-    log.info("[Uba] /v1/messages Delete method is called");
+    log.info("[Uba] v1/messages Delete method is called");
     return "Hello World";
-    }
+}
 
 }
