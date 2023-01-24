@@ -1,5 +1,24 @@
 package com.Configure.SwaggerApi.controller;
 
+import com.Configure.SwaggerApi.entitiy.Product;
+import com.Configure.SwaggerApi.entitiy.ResponseMessage;
+import com.Configure.SwaggerApi.exception.EmptyTableException;
+import com.Configure.SwaggerApi.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
 @RestController
 public class ProductController {
     @Autowired
@@ -35,7 +54,7 @@ public class ProductController {
     @PostMapping(path = "/addProduct")
     public ResponseEntity<Product> addProduct(@RequestBody Product product) {
         try {
-            ResponseEntity<Product> response = new ResponseEntity<>(productService.addProduct(product), HttpStatus.OK);
+            ResponseEntity<Product> response = new ResponseEntity<>(productService.createProduct(product), HttpStatus.OK);
             return response;
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.I_AM_A_TEAPOT);

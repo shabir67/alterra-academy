@@ -1,6 +1,9 @@
 package com.Configure.SwaggerApi;
 
+import com.Configure.SwaggerApi.entitiy.Product;
+import com.Configure.SwaggerApi.entitiy.ResponseMessage;
 import com.Configure.SwaggerApi.repository.ProductRepository;
+import com.Configure.SwaggerApi.service.ProductService;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -56,6 +59,7 @@ public class TestMockitoProductService {
     @Test
     public void addProductWithProductNotExistDataExistTblExistDbExist_WillCallRepositoryFindAllAndReturnAllProducts () {
         Product product = new Product();
+        product.setId(1L);
         product.setName("Sisir");
         product.setDescription("Warna Hijau");
         product.setStock(15);
@@ -66,7 +70,7 @@ public class TestMockitoProductService {
         given(productRepository.count()).willReturn(Long.valueOf(productId));
         given(productRepository.findById(anyLong())).willReturn(Optional.of(expectedProduct));
 
-        Product actualProduct = productService.addProduct(product);
+        Product actualProduct = productService.createProduct(product);
 
         then(productRepository).should(times(1)).count();
         then(productRepository).should(times(1)).save(any(Product.class));
