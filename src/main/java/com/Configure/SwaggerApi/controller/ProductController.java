@@ -35,7 +35,7 @@ public class ProductController {
                 return response;
             }
         } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 
@@ -46,7 +46,7 @@ public class ProductController {
             ResponseEntity<Product> response = new ResponseEntity<>(productService.getProductById(id), HttpStatus.OK);
             return response;
         } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.I_AM_A_TEAPOT);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 
@@ -57,7 +57,7 @@ public class ProductController {
             ResponseEntity<Product> response = new ResponseEntity<>(productService.createProduct(product), HttpStatus.OK);
             return response;
         } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.I_AM_A_TEAPOT);
+            return new ResponseEntity<>(HttpStatus.EXPECTATION_FAILED);
         }
     }
 
