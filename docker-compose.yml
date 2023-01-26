@@ -1,18 +1,26 @@
-version: '3.1'
+version: '3'
+
 services:
-  app:
-    container_name: swagger-api-service
-    image: product-service
-    build: ./
+  product-service:
+    container_name: product-service
+    image: 'product-service'
+    build:
+      context: product-service
+      dockerfile: Dockerfile
     ports:
-      - "8081:8080"
+      - "8082:8082"
     depends_on:
-      - docker-pg
-  docker-pg:
-    image: postgres
+      - product-db
+  product-db:
+    image: 'postgres:11-alpine'
+    container_name: product-db
     ports:
-      - "5432:5432"
+      - "5433:5432"
     environment:
       - POSTGRES_PASSWORD=password
       - POSTGRES_USER=postgres
-      - POSTGRES_DB=productdb
+      - POSTGRES_DB=product_db
+    volumes:
+      - product-db:/var/lib/postgresql/data
+volumes:
+  product-db:
