@@ -1,11 +1,12 @@
 package com.Configure.SwaggerApi.entitiy;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
+
+@AllArgsConstructor
+@NoArgsConstructor
 @Setter
 @Getter
 @Entity(name="product")
@@ -34,4 +35,4 @@ public class Product {
 //        this.description =description;
 //        this.stock = stock;
 //        this.price = price;
-}}
+}

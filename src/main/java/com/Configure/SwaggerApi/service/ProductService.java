@@ -4,9 +4,11 @@ import com.Configure.SwaggerApi.entitiy.Product;
 import com.Configure.SwaggerApi.entitiy.ResponseMessage;
 import com.Configure.SwaggerApi.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ProductService {
     @Autowired(required = false)
     ProductRepository productRepository;
@@ -32,6 +34,6 @@ public class ProductService {
 
     public ResponseMessage deleteProduct(Long id) {
         productRepository.deleteById(id);
-        return new ResponseMessage("Product succsesfully Deleted");
+        return new ResponseMessage("Product deleted successfully");
     }
 }
