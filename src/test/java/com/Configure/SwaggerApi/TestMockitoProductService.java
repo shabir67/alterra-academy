@@ -32,8 +32,8 @@ public class TestMockitoProductService {
     @Test
     public void getProductsWithDataExistTblExistDbExist_WillCallRepositoryFindAllAndReturnAllProducts () {
         List<Product> productList = new ArrayList<Product>();
-        productList.add(new Product(Long.valueOf(1), "Kipas", "Warna Kuning", 10, Long.valueOf(5000)));
-        productList.add(new Product(Long.valueOf(2), "Kaca", "Warna Hitam", 5, Long.valueOf(10000)));
+        productList.add(new Product(Long.valueOf(911), "Porsche 911", "GT3RS", 911, Long.valueOf(120000)));
+        productList.add(new Product(Long.valueOf(720), "Mc-Larren Senna", "JDM Version", 720, Long.valueOf(300000)));
         given(productRepository.findAll()).willReturn(productList);
 
         List<Product> actualProductList = productService.getProducts();
@@ -45,11 +45,11 @@ public class TestMockitoProductService {
 
     @Test
     public void getProductsWithIdWithDataExistTblExistDbExist_WillCallRepositoryFindAllAndReturnAllProducts () {
-        int productId = 1;
-        Product product = new Product(Long.valueOf(productId), "Kipas", "Warna Kuning", 10, Long.valueOf(5000));
+        int productId = 86;
+        Product product = new Product(Long.valueOf(productId), "Toyota AE-86", "Takumi Version", 86, Long.valueOf(86000));
         given(productRepository.findById(Long.valueOf(productId))).willReturn(Optional.of(product));
 
-        Product actualProduct = productService.getProductById(Long.valueOf(1));
+        Product actualProduct = productService.getProductById(Long.valueOf(86));
 
         assertEquals(product, actualProduct);
         then(productRepository).should(times(1)).findById(Long.valueOf(productId));
@@ -59,11 +59,11 @@ public class TestMockitoProductService {
     @Test
     public void addProductWithProductNotExistDataExistTblExistDbExist_WillCallRepositoryFindAllAndReturnAllProducts () {
         Product product = new Product();
-        product.setId(1L);
-        product.setName("Sisir");
-        product.setDescription("Warna Hijau");
-        product.setStock(15);
-        product.setPrice(Long.valueOf(7000));
+        product.setId(2L);
+        product.setName("Dodge Hellcat");
+        product.setDescription("Red Anniversary");
+        product.setStock(50);
+        product.setPrice(Long.valueOf(90000));
 
         int productId = 1;
         Product expectedProduct = new Product(Long.valueOf(productId), product.getName(), product.getDescription(), product.getStock(), product.getPrice());
@@ -80,8 +80,8 @@ public class TestMockitoProductService {
 
     @Test
     public void updateProductWithProductExistDataExistTblExistDbExist_WillCallRepositoryFindAllAndReturnAllProducts () {
-        int id = 1;
-        Product product = new Product(Long.valueOf(id), "Sepatu", "Sepatu Sekolah", 5, Long.valueOf(100000));
+        int id = 8;
+        Product product = new Product(Long.valueOf(id), "BMW", "M8-CS", 8, Long.valueOf(1800000));
         given(productRepository.findById(Long.valueOf(id))).willReturn(Optional.of(product));
 
         Product actualProduct = productService.updateProduct(product);
@@ -93,14 +93,14 @@ public class TestMockitoProductService {
 
     @Test
     public void deleteProductWithProductExistDataExistTblExistDbExist_willCallRepositoryFindAllAndReturnAllProduct () {
-        int id = 1;
-        Product product = new Product(Long.valueOf(id), "Kertas", "Size A4", 100, Long.valueOf(5000));
+        int id = 666;
+        Product product = new Product(Long.valueOf(id), "Lexus LFA", "V10 powaaa", 3, Long.valueOf(1000000));
         given(productRepository.findById(Long.valueOf(id))).willReturn(Optional.of(product));
 
         ResponseMessage actualResponseMessage = productService.deleteProduct(Long.valueOf(id));
 
         then(productRepository).should(times(1)).deleteById(Long.valueOf(id));
-        assertEquals(new ResponseMessage("Product Deleted").getMsg(), actualResponseMessage.getMsg());
+        assertEquals(new ResponseMessage("Product deleted successfully").getMsg(), actualResponseMessage.getMsg());
     }
 }
 
