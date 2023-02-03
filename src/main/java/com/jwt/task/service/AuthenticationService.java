@@ -27,12 +27,12 @@ public class AuthenticationService {
             log.info("[UBA] /auth req" + request);
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
-                            request.getEmail(),
+                            request.getPhone(),
                             request.getPassword()
                     )
             );
             log.info("[UBA] /authenticationManager is called");
-            var user = userRepository.findByEmail(request.getEmail())
+            var user = userRepository.findByPhone(request.getPhone())
                     .orElseThrow();
             log.info("[UBA] /user is" + user);
             var jwtToken = jwtService.generateToken(user);

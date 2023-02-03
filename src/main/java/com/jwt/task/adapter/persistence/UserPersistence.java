@@ -30,6 +30,7 @@ public class UserPersistence implements CreateUserPort, GetAllUserPort {
         var user = UserEntity.builder()
                 .name(userEntity.getName())
                 .email(userEntity.getEmail())
+                .phone(userEntity.getPhone())
                 .password(passwordEncoder.encode(userEntity.getPassword()))
                 .role(Role.USER)
                 .build();

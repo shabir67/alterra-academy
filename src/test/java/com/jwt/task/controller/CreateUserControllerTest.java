@@ -30,12 +30,12 @@ public class CreateUserControllerTest {
 
         //given
         UserEntity userEntity = new UserEntity();
-        userEntity.setName("Shobir");
-        userEntity.setEmail("souba676@gmail.com");
-        userEntity.setPassword("password");
-        userEntity.setRole(Role.USER);
-        UserEntity expectedUser = new UserEntity(
-                1, userEntity.getName(), userEntity.getEmail(), userEntity.getPassword(), userEntity.getRole());
+//        userEntity.setName("Shobir");
+//        userEntity.setEmail("souba676@gmail.com");
+//        userEntity.setPhone("14045");
+//        userEntity.setPassword("password");
+//        userEntity.setRole(Role.USER);
+        UserEntity expectedUser = new UserEntity(1,"Shobir","souba676@gmail.com","14045","password",Role.USER);
         given(createUserUseCase.createUser(userEntity)).willReturn(expectedUser);
 
         //when

@@ -25,11 +25,11 @@ public class UserEntity implements UserDetails {
     private int id;
     private String name;
     private String email;
+    private String phone;
     private String password;
 
     @Enumerated(EnumType.STRING)
     private Role role;
-
 
 
     @Override
@@ -44,7 +44,7 @@ public class UserEntity implements UserDetails {
 
     @Override
     public String getUsername() {
-        return email;
+        return phone;
     }
 
     @Override
