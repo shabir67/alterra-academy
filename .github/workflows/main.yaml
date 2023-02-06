@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - "main"
+      - "tugas_18-19"
   pull_request:
     types: [opened, synchronize, reopened]
 
