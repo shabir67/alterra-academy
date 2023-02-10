@@ -1,10 +1,10 @@
 package com.jwt.task.controller;
 
 
-import com.jwt.task.adapter.controller.CreateUserController;
-import com.jwt.task.entity.Role;
-import com.jwt.task.entity.UserEntity;
-import com.jwt.task.service.in.CreateUserUseCase;
+import com.jwt.task.auth.adapter.controller.CreateUserController;
+import com.jwt.task.auth.entity.Role;
+import com.jwt.task.auth.entity.UserEntity;
+import com.jwt.task.auth.service.in.CreateUserUseCase;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
