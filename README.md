@@ -1,5 +1,5 @@
 # alterra-academy
-## Akhirnya lancar clean architecture
+## Akhirnya lancar clean architecture(file yaml ada di resource)
 1. Kubectl
 <img width="720" alt="Screen Shot 2023-02-17 at 03 46 17" src="https://user-images.githubusercontent.com/39258245/219484452-a3211bea-e999-4f4c-8810-f00d3ae84097.png">
 2. Spring
