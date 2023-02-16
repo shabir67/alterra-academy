@@ -11,6 +11,6 @@ b. Minikube services express start
 a. Result
 <img width="720" alt="Screen Shot 2023-02-17 at 03 46 17" src="https://user-images.githubusercontent.com/39258245/219484512-035e10e2-e42e-4a43-b6c2-e50026ebca75.png">
 b. Minikube services express start
-
+<img width="747" alt="Screen Shot 2023-02-17 at 03 56 10" src="https://user-images.githubusercontent.com/39258245/219485403-16c30b04-3ad9-4095-8489-46e7fadbae7b.png">
 
 
